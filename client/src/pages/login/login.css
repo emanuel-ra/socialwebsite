@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    :root{
+        --login-background: rgb(188, 170, 164);
+        --login-btn: rgb(93, 64, 55);
+    }
+}
+@layer components{
+    .login{
+        @apply min-h-screen min-w-full bg-[var(--login-background)] flex items-center justify-center shadow-lg
+    }
+    .login .card{
+        @apply flex bg-white w-1/2 rounded-lg h-[40rem] overflow-hidden
+    }    
+    .login .card .left{
+        @apply flex flex-1 flex-col h-full p-14 gap-8 text-white
+    }
+    .login .card .right{
+        @apply flex flex-col flex-1  p-14 gap-9
+    }
+    .btn-register{
+        @apply bg-white p-2 text-[var(--login-btn)] font-bold w-1/2
+    }
+    .btn-login{
+        @apply w-1/2 mt-4 py-2 px-4 hover:bg-[var(--login-background)] bg-[var(--login-btn)] text-white hover:text-black font-bold
+    }
+    .input-register{
+        @apply  w-full py-5 px-2 border-b-2
+    }
+}
